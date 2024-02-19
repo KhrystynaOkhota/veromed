@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="uk" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>Veromed</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <link rel="stylesheet" href="assets/css/app.css" />
+
+</head>
+
+<body>
+
+    <div class="body-padding"></div>
+    <div id="loader-wrapper"></div>
+
+    <header class="header">
+        <div class="header-wrap">
+            <div class="mobile-menu">
+                <div class="logo"><!--  -->
+                    <a href="https://veromed.com.ua/"><img
+                            src="https://veromed.com.ua/wp-content/themes/veromed/assets/images/logo.svg"
+                            alt="logo"></a>
+                </div>
+
+
+                <button class="btn-primary open-modal">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path
+                            d="M19.4952 1.05537H17.8533C17.6713 1.05537 17.5237 1.20299 17.5237 1.38494C17.5237 1.56698 17.6713 1.71452 17.8533 1.71452H18.057V19.9138H5.75281V1.71452H7.12455V2.4632C7.12455 3.03714 7.59136 3.50395 8.1653 3.50395H9.72348C9.87929 4.36398 10.6337 5.01812 11.5376 5.01812H12.272C13.1758 5.01812 13.9302 4.36398 14.0861 3.50395H15.6442C16.2183 3.50395 16.6853 3.03705 16.6853 2.4632V1.04084C16.6853 0.4669 16.2183 0 15.6443 0H8.1653C7.59136 0 7.12455 0.4669 7.12455 1.04084V1.05537H4.31444C3.58961 1.05537 3 1.64515 3 2.36971V15.6005C3 15.7826 3.14754 15.9301 3.32958 15.9301C3.51145 15.9301 3.65916 15.7826 3.65916 15.6005V2.36971C3.65916 2.00853 3.95335 1.71452 4.31444 1.71452H5.09348V20.2431C5.09348 20.4252 5.24119 20.5726 5.42306 20.5726H18.3866C18.5687 20.5726 18.7161 20.4252 18.7161 20.2431V1.71452H19.4952C19.8565 1.71452 20.1504 2.00853 20.1504 2.36971V21.1854C20.1504 21.5469 19.8565 21.8409 19.4952 21.8409H4.31444C3.95335 21.8409 3.65916 21.5469 3.65916 21.1854V17.154C3.65916 16.9721 3.51145 16.8244 3.32958 16.8244C3.14754 16.8244 3 16.9721 3 17.154V21.1854C3 21.9103 3.58961 22.5 4.31444 22.5H19.4952C20.22 22.5 20.8095 21.9103 20.8095 21.1854V2.36971C20.8095 1.64515 20.22 1.05537 19.4952 1.05537ZM7.7837 1.04084C7.7837 0.830367 7.95483 0.659241 8.1653 0.659241H15.6443C15.8548 0.659241 16.0259 0.830367 16.0259 1.04084V2.4632C16.0259 2.67367 15.8548 2.8448 15.6443 2.8448H13.7862C13.6041 2.8448 13.4567 2.99242 13.4567 3.17437C13.4567 3.82763 12.9251 4.35897 12.272 4.35897H11.5376C10.8845 4.35897 10.3531 3.82763 10.3531 3.17437C10.3531 2.99242 10.2055 2.8448 10.0235 2.8448H8.1653C7.95483 2.8448 7.7837 2.67367 7.7837 2.4632V1.04084Z"
+                            fill="white"></path>
+                        <path
+                            d="M16.1031 14.0182H14.3604L13.2465 10.9767C13.136 10.6743 12.6974 10.6949 12.6178 11.0089L11.4214 15.7196L10.2664 12.3595C10.174 12.0909 9.80641 12.0575 9.66723 12.3054L8.70632 14.0184H7.7065C7.52428 14.0184 7.37692 14.1659 7.37692 14.348C7.37692 14.53 7.52428 14.6776 7.7065 14.6776H8.89937C9.01864 14.6776 9.1285 14.6131 9.18695 14.5092L9.88211 13.2695L11.1571 16.9784C11.2633 17.2873 11.708 17.2691 11.7883 16.9525L12.9943 12.2044L13.8207 14.4612C13.8681 14.591 13.9917 14.6774 14.1302 14.6774H16.103C16.2852 14.6774 16.4326 14.53 16.4326 14.3478C16.4326 14.1659 16.2852 14.0182 16.1031 14.0182Z"
+                            fill="white"></path>
+                        <path
+                            d="M16.1031 19.4536H7.7065C7.52446 19.4536 7.37692 19.6011 7.37692 19.7832C7.37692 19.9652 7.52446 20.1128 7.7065 20.1128H16.1031C16.2852 20.1128 16.4327 19.9652 16.4327 19.7832C16.4327 19.6011 16.2852 19.4536 16.1031 19.4536Z"
+                            fill="white"></path>
+                        <path
+                            d="M16.1031 22.3574H7.7065C7.52446 22.3574 7.37692 22.505 7.37692 22.687C7.37692 22.869 7.52446 23.0166 7.7065 23.0166H16.1031C16.2852 23.0166 16.4327 22.869 16.4327 22.687C16.4327 22.505 16.2852 22.3574 16.1031 22.3574Z"
+                            fill="white"></path>
+                    </svg>
+                    Записатись на прийом
+                </button>
+                <!--<a href="https://veromed.iconxlab.com/request/new?origin=40" target="_blank" class="btn-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path
+                        d="M19.4952 1.05537H17.8533C17.6713 1.05537 17.5237 1.20299 17.5237 1.38494C17.5237 1.56698 17.6713 1.71452 17.8533 1.71452H18.057V19.9138H5.75281V1.71452H7.12455V2.4632C7.12455 3.03714 7.59136 3.50395 8.1653 3.50395H9.72348C9.87929 4.36398 10.6337 5.01812 11.5376 5.01812H12.272C13.1758 5.01812 13.9302 4.36398 14.0861 3.50395H15.6442C16.2183 3.50395 16.6853 3.03705 16.6853 2.4632V1.04084C16.6853 0.4669 16.2183 0 15.6443 0H8.1653C7.59136 0 7.12455 0.4669 7.12455 1.04084V1.05537H4.31444C3.58961 1.05537 3 1.64515 3 2.36971V15.6005C3 15.7826 3.14754 15.9301 3.32958 15.9301C3.51145 15.9301 3.65916 15.7826 3.65916 15.6005V2.36971C3.65916 2.00853 3.95335 1.71452 4.31444 1.71452H5.09348V20.2431C5.09348 20.4252 5.24119 20.5726 5.42306 20.5726H18.3866C18.5687 20.5726 18.7161 20.4252 18.7161 20.2431V1.71452H19.4952C19.8565 1.71452 20.1504 2.00853 20.1504 2.36971V21.1854C20.1504 21.5469 19.8565 21.8409 19.4952 21.8409H4.31444C3.95335 21.8409 3.65916 21.5469 3.65916 21.1854V17.154C3.65916 16.9721 3.51145 16.8244 3.32958 16.8244C3.14754 16.8244 3 16.9721 3 17.154V21.1854C3 21.9103 3.58961 22.5 4.31444 22.5H19.4952C20.22 22.5 20.8095 21.9103 20.8095 21.1854V2.36971C20.8095 1.64515 20.22 1.05537 19.4952 1.05537ZM7.7837 1.04084C7.7837 0.830367 7.95483 0.659241 8.1653 0.659241H15.6443C15.8548 0.659241 16.0259 0.830367 16.0259 1.04084V2.4632C16.0259 2.67367 15.8548 2.8448 15.6443 2.8448H13.7862C13.6041 2.8448 13.4567 2.99242 13.4567 3.17437C13.4567 3.82763 12.9251 4.35897 12.272 4.35897H11.5376C10.8845 4.35897 10.3531 3.82763 10.3531 3.17437C10.3531 2.99242 10.2055 2.8448 10.0235 2.8448H8.1653C7.95483 2.8448 7.7837 2.67367 7.7837 2.4632V1.04084Z"
+                        fill="white" />
+                    <path
+                        d="M16.1031 14.0182H14.3604L13.2465 10.9767C13.136 10.6743 12.6974 10.6949 12.6178 11.0089L11.4214 15.7196L10.2664 12.3595C10.174 12.0909 9.80641 12.0575 9.66723 12.3054L8.70632 14.0184H7.7065C7.52428 14.0184 7.37692 14.1659 7.37692 14.348C7.37692 14.53 7.52428 14.6776 7.7065 14.6776H8.89937C9.01864 14.6776 9.1285 14.6131 9.18695 14.5092L9.88211 13.2695L11.1571 16.9784C11.2633 17.2873 11.708 17.2691 11.7883 16.9525L12.9943 12.2044L13.8207 14.4612C13.8681 14.591 13.9917 14.6774 14.1302 14.6774H16.103C16.2852 14.6774 16.4326 14.53 16.4326 14.3478C16.4326 14.1659 16.2852 14.0182 16.1031 14.0182Z"
+                        fill="white" />
+                    <path
+                        d="M16.1031 19.4536H7.7065C7.52446 19.4536 7.37692 19.6011 7.37692 19.7832C7.37692 19.9652 7.52446 20.1128 7.7065 20.1128H16.1031C16.2852 20.1128 16.4327 19.9652 16.4327 19.7832C16.4327 19.6011 16.2852 19.4536 16.1031 19.4536Z"
+                        fill="white" />
+                    <path
+                        d="M16.1031 22.3574H7.7065C7.52446 22.3574 7.37692 22.505 7.37692 22.687C7.37692 22.869 7.52446 23.0166 7.7065 23.0166H16.1031C16.2852 23.0166 16.4327 22.869 16.4327 22.687C16.4327 22.505 16.2852 22.3574 16.1031 22.3574Z"
+                        fill="white" />
+                </svg>
+                                </a>-->
+
+
+                <!--<div class="menu-icon">
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="text">Меню</div>
+            </div>-->
+                <div class="burger js-header">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="lang_switcher">
+                    <a class="#pll_switcher"><img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAFQSURBVHjaYmRo/c8AB//+MfwBkgwg8s8/KPoFI4GIgQEgAIdycgMACAMxUAF6oygqoQ1q45dkzSH5N26XR/8zCEuepggsVEPFkxB+S9bcRwCxMDCBVD/5+h+o9O8/BqDE378Mv/+DpCGKfgERmCHLw8jw4x9AAIFs+AdUBLQWZDZI9a/////8BSuFawBzf/8FuQMggFiALvsLsh2k+g/cbCTVUBLkKgaGDwwAAcTCIHJKhFPh19+fIHf/+/cbpBNI/gO75x+I/RfKluFiY5A6AhBAjH8fMjDI5P///+A/wy8GoFf/A+34hZVkYlJ6f/wUQACxAEOSESwEDEhURSiqwbJ/gKENEEAgDcwgDlAIrgiLNgaGvyD0hwEggEAamP4DdUrCREE6GRl/gyMPQv6BqgYG+z8GgABi/HoTFL///kBJBjgbwmBAcEEcBgaAAAMASIdu6OFHDhsAAAAASUVORK5CYII="
+                            alt="Українська" width="16" height="11" style="width: 16px; height: 11px;"></a>
+                    <ul class="pll_sub_menu">
+                        <li class="lang-item lang-item-10 lang-item-uk current-lang lang-item-first"><a lang="uk"
+                                hreflang="uk" href="https://veromed.com.ua/o-nas"><img
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAFQSURBVHjaYmRo/c8AB//+MfwBkgwg8s8/KPoFI4GIgQEgAIdycgMACAMxUAF6oygqoQ1q45dkzSH5N26XR/8zCEuepggsVEPFkxB+S9bcRwCxMDCBVD/5+h+o9O8/BqDE378Mv/+DpCGKfgERmCHLw8jw4x9AAIFs+AdUBLQWZDZI9a/////8BSuFawBzf/8FuQMggFiALvsLsh2k+g/cbCTVUBLkKgaGDwwAAcTCIHJKhFPh19+fIHf/+/cbpBNI/gO75x+I/RfKluFiY5A6AhBAjH8fMjDI5P///+A/wy8GoFf/A+34hZVkYlJ6f/wUQACxAEOSESwEDEhURSiqwbJ/gKENEEAgDcwgDlAIrgiLNgaGvyD0hwEggEAamP4DdUrCREE6GRl/gyMPQv6BqgYG+z8GgABi/HoTFL///kBJBjgbwmBAcEEcBgaAAAMASIdu6OFHDhsAAAAASUVORK5CYII="
+                                    alt="Українська" width="16" height="11" style="width: 16px; height: 11px;"></a></li>
+                        <li class="lang-item lang-item-13 lang-item-pl"><a lang="pl-PL" hreflang="pl-PL"
+                                href="https://veromed.com.ua/pl/o-nas-pl"><img
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAEISURBVHjaYvz/8SMDDPyD43//gPQ/bAAggFhACvn4gMT///8Zwdr+/wcRjP//MzMwMP1HAV+ePQMIIBYGqKL/yIz/2AAjI+O/P38AAoiFSNUQKaCTAAKIBehWRrhqMMSjAagDIIBYGPj5Gfr6/j979v/PH4Y/f/7D0e/f/38DGb/BjN8gWWnpfwsXAgQQ2EkPH/5/8OD/718MvyHqfv3/9fv/r18gNhLJ+OkT0DkAAQR2ElgIZDyyIlTVEMv/MDAABBBIAzPYAQxwRZja/gA1/GX4+xfoHIAAAmlg+v2HQVISbMxfhj8gnYxgIxkgJBD9/QtBQMUAAcT4FRy5cMSAykWTAgKAAAMA0PVcqMe0XaEAAAAASUVORK5CYII="
+                                    alt="Polski" width="16" height="11" style="width: 16px; height: 11px;"></a></li>
+                    </ul>
+                </div>
+
+                <ul class="location-mobil" style="left:47%;">
+                    <li><a href="https://veromed.com.ua/" class="active">Львів</a></li>
+                    <li>
+                        <noindex><a href="https://uzhgorod.veromed.com.ua/">Ужгород</a></noindex>
+                    </li>
+                    <li>
+                        <noindex><a href="https://mukachevo.veromed.com.ua/">Мукачево</a></noindex>
+                    </li>
+                </ul>
+
+
+            </div>
+            <div class="header-top container">
+                <div class="header-contacts">
+                    <div class="item">
+                        <img src="https://veromed.com.ua/wp-content/themes/veromed/assets/images/map.svg" alt="Адрес">
+                        <div class="text">м. Львів, вул. Щирецька 36/5</div>
+                    </div>
+                    <div class="item">
+                        <img src="https://veromed.com.ua/wp-content/themes/veromed/assets/images/phone.svg"
+                            alt="Телефон">
+                        <div class="text"><a href="tel:0800 33 38 48" class="binct-phone-number-1"
+                                data-binct-original="1">0800
+                                33 38 48</a></div>
+                    </div>
+                    <div class="item">
+                        <img src="https://veromed.com.ua/wp-content/themes/veromed/assets/images/mail.svg" alt="Email">
+                        <div class="text"><a
+                                href="mailto:call.centre.veromed@gmail.com">call.centre.veromed@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+
+                <nav class="location-navigation">
+                    <span>Львів <i class="icon-polygon"></i> </span>
+                    <ul class="location-menu">
+
+                        <li class="location-menu-item">
+                            <noindex><a href="https://uzhgorod.veromed.com.ua/">Ужгород</a></noindex>
+                        </li>
+                        <li class="location-menu-item">
+                            <noindex><a href="https://mukachevo.veromed.com.ua/">Мукачево</a></noindex>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header-socials">
+                    <div class="item">
+                        <img src="https://veromed.com.ua/wp-content/themes/veromed/assets/images/map.svg" alt="Адрес">
+                        <div class="text"><a target="_blank" href="https://www.facebook.com/veromedlviv">Facebook</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="https://veromed.com.ua/wp-content/themes/veromed/assets/images/map.svg" alt="Адрес">
+                        <div class="text"><a target="_blank" href="https://www.instagram.com/veromedlviv/">Instagram</a>
+                        </div>
+                    </div>
+                    <button class="btn-primary open-modal">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M19.4952 1.05537H17.8533C17.6713 1.05537 17.5237 1.20299 17.5237 1.38494C17.5237 1.56698 17.6713 1.71452 17.8533 1.71452H18.057V19.9138H5.75281V1.71452H7.12455V2.4632C7.12455 3.03714 7.59136 3.50395 8.1653 3.50395H9.72348C9.87929 4.36398 10.6337 5.01812 11.5376 5.01812H12.272C13.1758 5.01812 13.9302 4.36398 14.0861 3.50395H15.6442C16.2183 3.50395 16.6853 3.03705 16.6853 2.4632V1.04084C16.6853 0.4669 16.2183 0 15.6443 0H8.1653C7.59136 0 7.12455 0.4669 7.12455 1.04084V1.05537H4.31444C3.58961 1.05537 3 1.64515 3 2.36971V15.6005C3 15.7826 3.14754 15.9301 3.32958 15.9301C3.51145 15.9301 3.65916 15.7826 3.65916 15.6005V2.36971C3.65916 2.00853 3.95335 1.71452 4.31444 1.71452H5.09348V20.2431C5.09348 20.4252 5.24119 20.5726 5.42306 20.5726H18.3866C18.5687 20.5726 18.7161 20.4252 18.7161 20.2431V1.71452H19.4952C19.8565 1.71452 20.1504 2.00853 20.1504 2.36971V21.1854C20.1504 21.5469 19.8565 21.8409 19.4952 21.8409H4.31444C3.95335 21.8409 3.65916 21.5469 3.65916 21.1854V17.154C3.65916 16.9721 3.51145 16.8244 3.32958 16.8244C3.14754 16.8244 3 16.9721 3 17.154V21.1854C3 21.9103 3.58961 22.5 4.31444 22.5H19.4952C20.22 22.5 20.8095 21.9103 20.8095 21.1854V2.36971C20.8095 1.64515 20.22 1.05537 19.4952 1.05537ZM7.7837 1.04084C7.7837 0.830367 7.95483 0.659241 8.1653 0.659241H15.6443C15.8548 0.659241 16.0259 0.830367 16.0259 1.04084V2.4632C16.0259 2.67367 15.8548 2.8448 15.6443 2.8448H13.7862C13.6041 2.8448 13.4567 2.99242 13.4567 3.17437C13.4567 3.82763 12.9251 4.35897 12.272 4.35897H11.5376C10.8845 4.35897 10.3531 3.82763 10.3531 3.17437C10.3531 2.99242 10.2055 2.8448 10.0235 2.8448H8.1653C7.95483 2.8448 7.7837 2.67367 7.7837 2.4632V1.04084Z"
+                                fill="white"></path>
+                            <path
+                                d="M16.1031 14.0182H14.3604L13.2465 10.9767C13.136 10.6743 12.6974 10.6949 12.6178 11.0089L11.4214 15.7196L10.2664 12.3595C10.174 12.0909 9.80641 12.0575 9.66723 12.3054L8.70632 14.0184H7.7065C7.52428 14.0184 7.37692 14.1659 7.37692 14.348C7.37692 14.53 7.52428 14.6776 7.7065 14.6776H8.89937C9.01864 14.6776 9.1285 14.6131 9.18695 14.5092L9.88211 13.2695L11.1571 16.9784C11.2633 17.2873 11.708 17.2691 11.7883 16.9525L12.9943 12.2044L13.8207 14.4612C13.8681 14.591 13.9917 14.6774 14.1302 14.6774H16.103C16.2852 14.6774 16.4326 14.53 16.4326 14.3478C16.4326 14.1659 16.2852 14.0182 16.1031 14.0182Z"
+                                fill="white"></path>
+                            <path
+                                d="M16.1031 19.4536H7.7065C7.52446 19.4536 7.37692 19.6011 7.37692 19.7832C7.37692 19.9652 7.52446 20.1128 7.7065 20.1128H16.1031C16.2852 20.1128 16.4327 19.9652 16.4327 19.7832C16.4327 19.6011 16.2852 19.4536 16.1031 19.4536Z"
+                                fill="white"></path>
+                            <path
+                                d="M16.1031 22.3574H7.7065C7.52446 22.3574 7.37692 22.505 7.37692 22.687C7.37692 22.869 7.52446 23.0166 7.7065 23.0166H16.1031C16.2852 23.0166 16.4327 22.869 16.4327 22.687C16.4327 22.505 16.2852 22.3574 16.1031 22.3574Z"
+                                fill="white"></path>
+                        </svg>
+                        Записатись на прийом
+                    </button>
+
+
+                    <!--<a href="https://veromed.iconxlab.com/request/new?origin=40" target="_blank" class="btn-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path
+                        d="M19.4952 1.05537H17.8533C17.6713 1.05537 17.5237 1.20299 17.5237 1.38494C17.5237 1.56698 17.6713 1.71452 17.8533 1.71452H18.057V19.9138H5.75281V1.71452H7.12455V2.4632C7.12455 3.03714 7.59136 3.50395 8.1653 3.50395H9.72348C9.87929 4.36398 10.6337 5.01812 11.5376 5.01812H12.272C13.1758 5.01812 13.9302 4.36398 14.0861 3.50395H15.6442C16.2183 3.50395 16.6853 3.03705 16.6853 2.4632V1.04084C16.6853 0.4669 16.2183 0 15.6443 0H8.1653C7.59136 0 7.12455 0.4669 7.12455 1.04084V1.05537H4.31444C3.58961 1.05537 3 1.64515 3 2.36971V15.6005C3 15.7826 3.14754 15.9301 3.32958 15.9301C3.51145 15.9301 3.65916 15.7826 3.65916 15.6005V2.36971C3.65916 2.00853 3.95335 1.71452 4.31444 1.71452H5.09348V20.2431C5.09348 20.4252 5.24119 20.5726 5.42306 20.5726H18.3866C18.5687 20.5726 18.7161 20.4252 18.7161 20.2431V1.71452H19.4952C19.8565 1.71452 20.1504 2.00853 20.1504 2.36971V21.1854C20.1504 21.5469 19.8565 21.8409 19.4952 21.8409H4.31444C3.95335 21.8409 3.65916 21.5469 3.65916 21.1854V17.154C3.65916 16.9721 3.51145 16.8244 3.32958 16.8244C3.14754 16.8244 3 16.9721 3 17.154V21.1854C3 21.9103 3.58961 22.5 4.31444 22.5H19.4952C20.22 22.5 20.8095 21.9103 20.8095 21.1854V2.36971C20.8095 1.64515 20.22 1.05537 19.4952 1.05537ZM7.7837 1.04084C7.7837 0.830367 7.95483 0.659241 8.1653 0.659241H15.6443C15.8548 0.659241 16.0259 0.830367 16.0259 1.04084V2.4632C16.0259 2.67367 15.8548 2.8448 15.6443 2.8448H13.7862C13.6041 2.8448 13.4567 2.99242 13.4567 3.17437C13.4567 3.82763 12.9251 4.35897 12.272 4.35897H11.5376C10.8845 4.35897 10.3531 3.82763 10.3531 3.17437C10.3531 2.99242 10.2055 2.8448 10.0235 2.8448H8.1653C7.95483 2.8448 7.7837 2.67367 7.7837 2.4632V1.04084Z"
+                        fill="white" />
+                    <path
+                        d="M16.1031 14.0182H14.3604L13.2465 10.9767C13.136 10.6743 12.6974 10.6949 12.6178 11.0089L11.4214 15.7196L10.2664 12.3595C10.174 12.0909 9.80641 12.0575 9.66723 12.3054L8.70632 14.0184H7.7065C7.52428 14.0184 7.37692 14.1659 7.37692 14.348C7.37692 14.53 7.52428 14.6776 7.7065 14.6776H8.89937C9.01864 14.6776 9.1285 14.6131 9.18695 14.5092L9.88211 13.2695L11.1571 16.9784C11.2633 17.2873 11.708 17.2691 11.7883 16.9525L12.9943 12.2044L13.8207 14.4612C13.8681 14.591 13.9917 14.6774 14.1302 14.6774H16.103C16.2852 14.6774 16.4326 14.53 16.4326 14.3478C16.4326 14.1659 16.2852 14.0182 16.1031 14.0182Z"
+                        fill="white" />
+                    <path
+                        d="M16.1031 19.4536H7.7065C7.52446 19.4536 7.37692 19.6011 7.37692 19.7832C7.37692 19.9652 7.52446 20.1128 7.7065 20.1128H16.1031C16.2852 20.1128 16.4327 19.9652 16.4327 19.7832C16.4327 19.6011 16.2852 19.4536 16.1031 19.4536Z"
+                        fill="white" />
+                    <path
+                        d="M16.1031 22.3574H7.7065C7.52446 22.3574 7.37692 22.505 7.37692 22.687C7.37692 22.869 7.52446 23.0166 7.7065 23.0166H16.1031C16.2852 23.0166 16.4327 22.869 16.4327 22.687C16.4327 22.505 16.2852 22.3574 16.1031 22.3574Z"
+                        fill="white" />
+                </svg>
+                                </a>-->
+
+
+                    <div class="lang_switcher">
+                        <a class="#pll_switcher"><img
+                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAFQSURBVHjaYmRo/c8AB//+MfwBkgwg8s8/KPoFI4GIgQEgAIdycgMACAMxUAF6oygqoQ1q45dkzSH5N26XR/8zCEuepggsVEPFkxB+S9bcRwCxMDCBVD/5+h+o9O8/BqDE378Mv/+DpCGKfgERmCHLw8jw4x9AAIFs+AdUBLQWZDZI9a/////8BSuFawBzf/8FuQMggFiALvsLsh2k+g/cbCTVUBLkKgaGDwwAAcTCIHJKhFPh19+fIHf/+/cbpBNI/gO75x+I/RfKluFiY5A6AhBAjH8fMjDI5P///+A/wy8GoFf/A+34hZVkYlJ6f/wUQACxAEOSESwEDEhURSiqwbJ/gKENEEAgDcwgDlAIrgiLNgaGvyD0hwEggEAamP4DdUrCREE6GRl/gyMPQv6BqgYG+z8GgABi/HoTFL///kBJBjgbwmBAcEEcBgaAAAMASIdu6OFHDhsAAAAASUVORK5CYII="
+                                alt="Українська" width="16" height="11" style="width: 16px; height: 11px;"></a>
+                        <ul class="pll_sub_menu">
+                            <li class="lang-item lang-item-10 lang-item-uk current-lang lang-item-first"><a lang="uk"
+                                    hreflang="uk" href="https://veromed.com.ua/o-nas"><img
+                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAFQSURBVHjaYmRo/c8AB//+MfwBkgwg8s8/KPoFI4GIgQEgAIdycgMACAMxUAF6oygqoQ1q45dkzSH5N26XR/8zCEuepggsVEPFkxB+S9bcRwCxMDCBVD/5+h+o9O8/BqDE378Mv/+DpCGKfgERmCHLw8jw4x9AAIFs+AdUBLQWZDZI9a/////8BSuFawBzf/8FuQMggFiALvsLsh2k+g/cbCTVUBLkKgaGDwwAAcTCIHJKhFPh19+fIHf/+/cbpBNI/gO75x+I/RfKluFiY5A6AhBAjH8fMjDI5P///+A/wy8GoFf/A+34hZVkYlJ6f/wUQACxAEOSESwEDEhURSiqwbJ/gKENEEAgDcwgDlAIrgiLNgaGvyD0hwEggEAamP4DdUrCREE6GRl/gyMPQv6BqgYG+z8GgABi/HoTFL///kBJBjgbwmBAcEEcBgaAAAMASIdu6OFHDhsAAAAASUVORK5CYII="
+                                        alt="Українська" width="16" height="11" style="width: 16px; height: 11px;"></a>
+                            </li>
+                            <li class="lang-item lang-item-13 lang-item-pl"><a lang="pl-PL" hreflang="pl-PL"
+                                    href="https://veromed.com.ua/pl/o-nas-pl"><img
+                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAEISURBVHjaYvz/8SMDDPyD43//gPQ/bAAggFhACvn4gMT///8Zwdr+/wcRjP//MzMwMP1HAV+ePQMIIBYGqKL/yIz/2AAjI+O/P38AAoiFSNUQKaCTAAKIBehWRrhqMMSjAagDIIBYGPj5Gfr6/j979v/PH4Y/f/7D0e/f/38DGb/BjN8gWWnpfwsXAgQQ2EkPH/5/8OD/718MvyHqfv3/9fv/r18gNhLJ+OkT0DkAAQR2ElgIZDyyIlTVEMv/MDAABBBIAzPYAQxwRZja/gA1/GX4+xfoHIAAAmlg+v2HQVISbMxfhj8gnYxgIxkgJBD9/QtBQMUAAcT4FRy5cMSAykWTAgKAAAMA0PVcqMe0XaEAAAAASUVORK5CYII="
+                                        alt="Polski" width="16" height="11" style="width: 16px; height: 11px;"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="header-menu">
+                <div class="container">
+                    <nav class="menu"><!-- https://veromed.com.ua/wp-content/uploads/2021/03/main-logo.svg -->
+                        <a href="https://veromed.com.ua/"><img
+                                src="https://veromed.com.ua/wp-content/themes/veromed/assets/images/logo.svg" alt="logo"
+                                class="header-menu__logo"></a>
+                        <ul class="menu-wrap">
+                            <li class="item "><a href="/">Головна</a></li>
+                            <li class="item "><a href="/services">Послуги</a></li>
+                            <li class="item "><a href="/czini">Ціни</a></li>
+                            <li class="item "><a href="/result">Результати</a></li>
+                            <li class="item "><a href="/news">Новини</a></li>
+                            <li class="item "><a href="/collective">Наші лікарі</a></li>
+                            <li class="item "><a href="/partneri">Партнери</a></li>
+                            <li class="item active"><a href="/o-nas">Про нас</a></li>
+                            <li class="item "><a href="/kontakti">Контакти</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+
+        <section class="s-banner">
+            <div class="container">
+                <div class="row m-row align-middle">
+                    <div class="column col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="s-banner__bg">
+                            <img src="https://veromed.lviv.webdev2022.fun/wp-content/uploads/2020/06/8e1a7456-1.jpg"
+                                alt="" class="s-banner__bg--img">
+                        </div>
+                    </div>
+                    <div class="column col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <h1 class="s-banner__heading">Відгуки</h1>
+                        <div class="s-banner__description text-m">
+                            Ми завжди прагнемо підвищити рівень сервісу надаваних медичних послуг в мережі клінік
+                            "Оксфорд
+                            Медікал", і вдячні вам за залишений позитивний відгук. Ми беремо до уваги всі коментарі та
+                            побажання, які відносяться до нашої роботи. Дякуємо за ваш вибір.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="kama_breadcrumbs__wrap --relative">
+            <div class="container">
+
+                <div class="kama_breadcrumbs">
+                    <span>
+                        <a href="№" itemprop="item">
+                            <span itemprop="name">Головна</span>
+                        </a>
+                    </span>
+                    <span class="kb_sep"><i class="icon-right-arrow"></i></span>
+                    <span class="kb_title"> Відгуки </span>
+                </div>
+            </div>
+        </div>
+
+        <section class="s-review">
+            <div class="container">
+
+                <div class="m-row row">
+                    <div class="column col-xl-10 col-lg-10 col-md-10 col-sm-12 col-xs-12">
+                        <div class="filter">
+
+                            <ul class="filter-menu">
+                                <li class="filter-menu__item">
+                                    <a href="reviews-video.html" class="filter-button">Відео відгуки</a>
+                                </li>
+                                <li class="filter-menu__item"><a href="" class="js-reviews-button active">Текстові
+                                        відгуки</a></li>
+                            </ul>
+
+                            <a href="#" class="write-review open-popup" data-rel="review-form">Залишити відгук</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-row align-middle">
+                    <div class="column col-xl-10 col-lg-10 col-md-10 col-sm-12 col-xs-12">
+
+                        <div class="review__item">
+
+                            <div class="d-flex align-justify align-middle">
+                                <div class="review__name"><b>Оля</b></div>
+                                <div class="review__date"> 10-02-2024 </div>
+                            </div>
+
+                            <div class="review__text text-m">
+                                Приємний в спілкуванні та вічливий лікар . Професіоналізм вищої категорії.
+                                Гастроскопію зробив швидко та безболісно. </div>
+                            <div class="review__department">
+                                <p>
+                                    <b>відділення:</b>
+                                    <a href="#"><b>Ендоскопія</b> </a>
+                                </p>
+                            </div>
+
+                        </div>
+                        <div class="review__item">
+
+                            <div class="d-flex align-justify align-middle">
+                                <div class="review__name text-m"><b>Оля</b></div>
+                                <div class="review__date"> 10-02-2024 </div>
+                            </div>
+
+                            <div class="review__text text-m">
+                                Приємний в спілкуванні та вічливий лікар . Професіоналізм вищої категорії.
+                                Гастроскопію зробив швидко та безболісно. </div>
+                            <div class="review__department">
+                                <p>
+                                    <b>відділення:</b>
+                                    <a href="#"><b>Ендоскопія</b> </a>
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="review__item">
+
+                            <div class="d-flex align-justify align-middle">
+                                <div class="review__name text-m"><b>Оля sdfsfdgghgjhg</b></div>
+                                <div class="review__date"> 10-02-2024 </div>
+                            </div>
+
+                            <div class="review__text text-m">
+                                Приємний в спілкуванні та вічливий лікар . Професіоналізм вищої категорії.
+                                Гастроскопію зробив швидко та безболісно. </div>
+                            <div class="review__department">
+                                <p>
+                                    <b>відділення:</b>
+                                    <a href="#"><b>Ендоскопія</b> </a>
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="s-leave-review">
+            <div class="container">
+                <div class="row align-center">
+                    <div class=" col-xl-10 col-lg-11 col-md-12 col-sm-12 col-xs-12">
+                        <h1 class="heading text-xl text-bold text-center">ЗАЛИШИТИ ВІДГУК</h1>
+                    </div>
+                </div>
+        
+                <div class="s-leave-review__form">
+                    <form>
+                        <div class="row m-row">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 column">
+                                <div class="form-control">
+                                    <input class="form-control__input " type="text" name="" placeholder="Ваше Ім’я">
+                                </div>
+                                <div class="form-control">
+                                
+                                    <input class="form-control__input " type="tel" name="" placeholder="Ваш Телефон">
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 column">
+                                <div class="form-control">
+                                    <select name="department_list" tabindex="0" style="">
+                                        <option value="5">Проктологія</option>
+                                        <option value="7">Гінекологія</option>
+                                        <option value="9">Урологія</option>
+                                        <option value="11">Естетична медицина</option>
+                                        <option value="13">Дерматологія</option>
+                                        <option value="15">Ультразвукова діагностика</option>
+                                        <option value="17">Терапія</option>
+                                        <option value="19">Отоларингологія</option>
+                                        <option value="21">Ендоскопія</option>
+                                        <option value="23">Ендокринологія</option>
+                                        <option value="25">Неврологія</option>
+                                        <option value="27">Гастроентерологія</option>
+                                        <option value="29">Кардіологія</option>
+                                        <option value="31">Трихологія</option>
+                                        <option value="32">Офтальмологія</option>
+                                        <option value="35">Педіатрія</option>
+                                        <option value="132">Травматологія</option>
+                                        <option value="136">Флебологія</option>
+                                        <option value="137">Естетична гінекологія</option>
+                                        <option value="183">Відділення променевої діагностики</option>
+                                        <option value="184">Цифровий рентген</option>
+                                        <option value="185">Мамографія</option>
+                                        <option value="186">Комп'ютерна томографія </option>
+                                        <option value="187">МРТ-діагностика </option>
+                                        <option value="188"> Мамологія</option>
+                                        <option value="189">Хірургія</option>
+                                        <option value="190">Онкологія</option>
+                                        <option value="192">Спінальна хірургія </option>
+                                    </select>
+                                </div>
+                                <div class="form-control">
+                                    <input class="form-control__input " type="email" name=""
+                                        placeholder="Ваш Email">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row m-row">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 column">
+                                <div class="form-control">
+                                    <textarea  class="form-control__textarea" name="" rows="10"
+                                        placeholder="Повідомлення"></textarea>
+                                </div>
+                                <input type="submit" value="Відправити" class="btn-primary text-center">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-wrap">
+                <div class="item item-main">
+                    <div class="logo">
+                        <a href="https://veromed.com.ua/"><img
+                                src="https://veromed.com.ua/wp-content/uploads/2021/03/logo.png" alt="logo"></a>
+                    </div>
+                    <div class="desc">
+                        <h5><strong><span style="color: #b21c1c;">“VeroMed”</span></strong> – це багатопрофільний
+                            медичний
+                            центр, що відповідає найвищим світовим стандартам надання медичної допомоги.</h5>
+                        <p>Наші спеціалісти забезпечать Вас лише якісним медичним обслуговуванням. Колектив центру – це
+                            велика дружня сім’я. І ми з великою любов’ю і турботою відносимось до кожного нашого
+                            пацієнта.
+                            Лікарі медичного центру “VeroMed” постійно підтримують і підвищують рівень своїх професійних
+                            навиків на основі передових досягнень світової медицини. І все це завдяки вузькій
+                            спеціалізації
+                            кожного нашого працівника.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="title">Веромед</div>
+                    <ul class="footer-menu">
+                        <div class="menu-footer-menu-container">
+                            <ul id="menu-footer-menu" class="menu">
+                                <li id="menu-item-235"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-235"><a
+                                        href="/news">Новини</a></li>
+                                <li id="menu-item-239"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-239">
+                                    <a href="/o-nas" aria-current="page">Про нас</a>
+                                </li>
+                                <li id="menu-item-236"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-236"><a
+                                        href="/collective">Наші лікарі</a></li>
+                                <li id="menu-item-238"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-238"><a
+                                        href="/partneri">Наші партнери</a></li>
+                                <li id="menu-item-265"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-265"><a
+                                        href="/czini">Ціни</a></li>
+                                <li id="menu-item-1692"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1692"><a
+                                        href="https://veromed.com.ua/publichna-oferta">Публічна оферта</a></li>
+                                <li id="menu-item-1769"
+                                    class="menu-item menu-item-type-post_type_archive menu-item-object-statti menu-item-1769">
+                                    <a href="https://veromed.com.ua/statti">Статті</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </ul>
+                </div>
+                <div class="item">
+                    <div class="title">Наші послуги</div>
+                    <ul class="footer-menu">
+                        <li><a href="https://veromed.com.ua/services/flebologiya">Флебологія</a></li>
+                        <li><a href="https://veromed.com.ua/services/varikozna-hvoroba-ven-nig-lazerne-likuvannya">Лазерне
+                                лікування варикозної хвороби вен нижніх кінцівок</a></li>
+                        <li><a href="https://veromed.com.ua/services/skleroterapiya">Склеротерапія</a></li>
+                        <li><a href="https://veromed.com.ua/services/trofichni-virazki">Трофічні виразки</a></li>
+                        <li><a href="https://veromed.com.ua/services/hair">Трансплантація волосся</a></li>
+                        <li><a href="https://veromed.com.ua/services/trihologia">Трихологія</a></li>
+                        <li><a href="https://veromed.com.ua/services/dermatologiya">Дерматологія</a></li>
+                        <li><a href="https://veromed.com.ua/services/uzd-ven">Ультразвукова діагностика (УЗД)</a></li>
+                        <li><a href="https://veromed.com.ua/services/proktologiya">Проктологія</a></li>
+                        <li>
+                            <a
+                                href="https://veromed.com.ua/services/gastroenterologiya-ta-diyetologiya">Гастроентерологія</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <div class="title">
+                        Графік роботи
+                    </div>
+                    <p>Пн-Пт: 09:00 - 19:00</p>
+                    <p>Сб: 09:00 - 15:00</p>
+                    <p>Нд: вихідний</p>
+                    <div class="title title2">
+                        Контакти
+                    </div>
+                    <p></p>
+                    <p><a href="tel:0800 33 38 48" class="binct-phone-number-1" data-binct-original="3">0800 33 38
+                            48</a>
+                    </p>
+                    <p><a href="mailto:call.centre.veromed@gmail.com">call.centre.veromed@gmail.com</a></p>
+                </div>
+                <div class="item">
+                    <div class="title">
+                        Соціальні мережі
+                    </div>
+                    <div class="social">
+                        <a href="https://www.facebook.com/veromedlviv/" target="_blank">
+                            <div class="icon"><img
+                                    src="https://veromed.com.ua/wp-content/themes/veromed/assets/images/facebook.svg">
+                            </div>
+                            Facebook
+                        </a>
+                    </div>
+                    <div class="social">
+                        <a href="https://www.instagram.com/veromedlviv/" target="_blank">
+                            <div class="icon"><img
+                                    src="https://veromed.com.ua/wp-content/themes/veromed/assets/images/instagram.svg">
+                            </div>
+                            Instagram
+                        </a>
+                    </div>
+                    <div class="social">
+                        <a href="https://www.youtube.com/channel/UCf3fyy0eWb6uy5rS_Z9i9dg" target="_blank">
+                            <div class="icon"><img
+                                    src="https://veromed.com.ua/wp-content/themes/veromed/assets/images/youtube.svg">
+                            </div>
+                            Youtube
+                        </a>
+                    </div>
+
+                    <img src="https://veromed.com.ua/wp-content/themes/veromed/assets/images/cards.svg" class="cards"
+                        alt="">
+                </div>
+            </div>
+            <div class="rights text-center">
+                <div>© 2024 Веромед. Всі права захищені. Заборонено використання матеріалів сайту без згоди його авторів
+                    і
+                    зворотнього посилання. Mи використовуємо за замовчуванням державну мову, але повідомляємо, що сайт
+                    може
+                    відкриватися на мові, яка встановлена на браузері/інтерфейсі користувача
+                </div>
+
+            </div>
+            <div class="footer-develop">
+                <div class="text-center">Design and development — <a href="https://webtune.com.ua/" target="_blank"
+                        class="by">WebTune</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="popup__wrapper">
+        <div class="bg-layer"></div>
+
+        <div class="popup__content" data-rel="review-form">
+            <div class="layer-close"></div>
+            <div class="popup__container">
+                <div class="btn-close"></div>
+
+                <div class="review-form">
+
+                    <h4 class="heading text-l text-bold text-center">Залишити повідомлення для адміністрації клініки</h4>
+
+                    <form>
+                        <div class="row m-row align-center">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 column">
+                                <div class="form-control">
+                                    <select name="type_id" id="emotion" class="white-select " tabindex="0" style="">
+                                        <option value="0">Подякувати</option>
+                                        <option value="1">Поскаржитись</option>
+                                        <option value="2">Коментар</option>
+                                    </select>
+                                </div>
+                                <div class="form-control">
+                                    <input class="form-control__input " type="text" name="" placeholder="Ваше Ім’я">
+                                </div>
+                                <div class="form-control">
+                                    <input class="form-control__input " type="email" name="" placeholder="Ваш Email">
+                                </div>
+                                <div class="form-control">
+                                    <textarea class="form-control__textarea" name="message" rows="10"
+                                        placeholder="Повідомлення"></textarea>
+                                </div>
+                                <input type="submit" value="Відправити" class="btn-primary text-center">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/js/jquery-3.7.0.min.js"></script>
+
+    <script src="assets/js/js_app.min.js"></script>
+
+
+
+
+</body>
+
+</html>
