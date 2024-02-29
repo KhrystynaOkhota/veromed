@@ -582,48 +582,7 @@
 </footer>
 
 <script src="./assets/js/jquery-3.7.0.min.js"></script>
-
-<script>
-    /* $(document).on('click', '.accordeon-title', function () {
-         if ($(this).hasClass('static')) {
-             $(this).toggleClass('active').next().slideToggle();
-         } else {
-             $(this).siblings('.accordeon-title.active').toggleClass('active').next().slideToggle();
-             $(this).toggleClass('active').next().slideToggle();
-             $('.sub-faq-title').removeClass('active').next().slideUp();
-         }
-     });
-*/
-    //jQuery(function () {
-
-    var body = jQuery('body');
-    jQuery('.location-current').on('click', function (e) {
-
-        e.preventDefault();
-        jQuery('.location-navigation').toggleClass('open');
-    });
-
-    body.on('click', function (e) {
-        if (!jQuery(e.target).closest('.location-navigation').length) {
-            jQuery('.location-navigation').removeClass('open');
-        }
-    });
-    // });
-
-</script>
-<script>
-
-    $(document).on('click', '.accordeon-title', function () {
-        if ($(this).hasClass('static')) {
-            $(this).toggleClass('active').next().slideToggle();
-        } else {
-            $(this).siblings('.accordeon-title.active').toggleClass('active').next().slideToggle();
-            $(this).toggleClass('active').next().slideToggle();
-            $('.sub-faq-title').removeClass('active').next().slideUp();
-        }
-    });
-
-</script>
+<script src="assets/js/js_app.min.js"></script>
 
 
 </body>

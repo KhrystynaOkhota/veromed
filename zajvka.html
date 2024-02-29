@@ -658,39 +658,9 @@
     </div>
 </footer>
 <script src="./assets/js/jquery-3.7.0.min.js"></script>
--->
-<!--<script src="assets/js/swiper-bundle.min.js"></script>
-<script src="assets/js/js_app.min.js"></script>-->
-<script>
-    $(document).on('click', '.accordeon-title', function () {
-        if ($(this).hasClass('static')) {
-            $(this).toggleClass('active').next().slideToggle();
-        } else {
-            $(this).siblings('.accordeon-title.active').toggleClass('active').next().slideToggle();
-            $(this).toggleClass('active').next().slideToggle();
-            $('.sub-faq-title').removeClass('active').next().slideUp();
-        }
-    });
-</script>
+<script src="assets/js/js_app.min.js"></script>
 
-<script>
-    $(function () {
 
-        var body = $('body');
-        $('.location__current').on('click', function (e) {
-
-            e.preventDefault();
-            $('.location__wrap').toggleClass('open');
-        });
-
-        body.on('click', function (e) {
-            if (!$(e.target).closest('.location__wrap').length) {
-                $('.location__wrap').removeClass('open');
-            }
-        });
-    });
-
-</script>
 </body>
 
 </html>
