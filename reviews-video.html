@@ -503,16 +503,6 @@
 </footer>
 
 
-<!--<section class="video-popup"><i id="video-popup__close" class="icon icon-cross"></i>
-    <div class="video-popup__bg"></div>
-    <video class="video-container" width="400" controls>
-        <source src="" type="video/mp4">
-        <source src="" type="video/webm">
-        <source src="" type="video/ogv">
-    </video>
-</section>-->
-
-
 <div class="video-popup__wrapper">
     <div class="bg-layer"></div>
 
@@ -530,9 +520,51 @@
 </div>
 
 
+<div class="popup__wrapper">
+    <div class="bg-layer"></div>
+
+    <div class="popup__content" data-rel="review-form">
+        <div class="layer-close"></div>
+        <div class="popup__container">
+            <div class="btn-close"></div>
+
+            <div class="review-form">
+
+                <h4 class="heading text-l text-bold text-center">Залишити повідомлення для адміністрації клініки</h4>
+
+                <form>
+                    <div class="row m-row align-center">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 column">
+                            <div class="form-control select-box">
+                                <select name="type_id" id="emotion" class="white-select " tabindex="0" style="">
+                                    <option value="0">Подякувати</option>
+                                    <option value="1">Поскаржитись</option>
+                                    <option value="2">Коментар</option>
+                                </select>
+                            </div>
+                            <div class="form-control">
+                                <input class="form-control__input " type="text" name="" placeholder="Ваше Ім’я">
+                            </div>
+                            <div class="form-control">
+                                <input class="form-control__input " type="email" name="" placeholder="Ваш Email">
+                            </div>
+                            <div class="form-control">
+                                    <textarea class="form-control__textarea" name="message" rows="10"
+                                              placeholder="Повідомлення"></textarea>
+                            </div>
+                            <input type="submit" value="Відправити" class="btn-primary text-center">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
 <script src="./assets/js/jquery-3.7.0.min.js"></script>
 <script src="./assets/js/jquery.sumoselect.min.js"></script>
-<script src="./assets/js/js_app.min.js"></script>
+<script src="assets/js/js_app.min.js"></script>
 <script>
     var windowWidth = window.innerWidth, isTablet, isMobile;
 
@@ -572,25 +604,9 @@
 
 
     });
-    /*function closePopUpVideo() {
-        var e = $(".video-popup")
-            , t = $(".video-container > source");
-        let autoplayVideo3 = $(".video-container").get(0);
 
-        autoplayVideo3.pause();
-        windowWidth >= 1024 ? $(document).mouseup(function (i) {
-            e.hasClass("open") && ($(i.target).closest(".video-container").length || (e.removeClass("open"),
-                t.attr("src", "")))
-        }) : windowWidth <= 1024 && $(document).bind("touchend", function (i) {
-            e.hasClass("open") && ($(i.target).closest(".video-container").length || (e.removeClass("open"),
-                t.attr("src", "")))
-        })
-
-
-    }
-    closePopUpVideo();*/
 </script>
-<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/jquery.magnific-popup.min.js"></script>-->
+
 
 
 </body>
